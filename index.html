@@ -17,6 +17,7 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
+
   <body>
     <header class="header">
       <div class="container">
@@ -55,7 +56,17 @@
       <section class="hero">
         <div class="container">
           <h1 class="titel-hero">Эффективные решения для вашего бизнеса</h1>
-          <button class="button" type="button">Заказать услугу</button>
+          <button class="button" type="button" data-modal-open>Заказать услугу</button>
+        </div>
+
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button class="modal-close-btn" type="button" data-modal-close>
+              <svg class="close-icon">
+                <use href="./images/sprite.svg#cros"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -116,17 +127,26 @@
           <h2 class="titel-section">Чем мы занимаемся</h2>
           <ul class="list we-doing card-set">
             <li class="items card-set-item">
-              <img src="./images/studio/work/work1.jpg" alt="Пишим програмы" width="370" />
+              <div class="tumb-doing">
+                <img src="./images/studio/work/work1.jpg" alt="Пишим програмы" width="370" />
+                <h3 class="desc-pic-doing">Десктопные приложения</h3>
+              </div>
             </li>
             <li class="items card-set-item">
-              <img
-                src="./images/studio/work/work2.jpg"
-                alt="Пишем приложения на смартфон"
-                width="370"
-              />
+              <div class="tumb-doing">
+                <img
+                  src="./images/studio/work/work2.jpg"
+                  alt="Пишем приложения на смартфон"
+                  width="370"
+                />
+                <h3 class="desc-pic-doing">Мобильные приложения</h3>
+              </div>
             </li>
             <li class="items card-set-item">
-              <img src="./images/studio/work/work3.jpg" alt="Дизайн сайтов" width="370" />
+              <div class="tumb-doing">
+                <img src="./images/studio/work/work3.jpg" alt="Дизайн сайтов" width="370" />
+                <h3 class="desc-pic-doing">Дизайнерские решения</h3>
+              </div>
             </li>
           </ul>
         </div>
@@ -531,5 +551,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
