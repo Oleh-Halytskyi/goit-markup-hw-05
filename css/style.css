@@ -288,7 +288,6 @@ img {
 
 .backdrop.is-hidden {
   opacity: 0;
-  visibility: hidden;
   pointer-events: none;
 }
 
@@ -330,8 +329,8 @@ img {
 }
 
 .close-icon {
-  width: 11px;
-  height: 11px;
+  width: 15px;
+  height: 15px;
 
   fill: currentColor;
 }
@@ -408,7 +407,7 @@ img {
   --items: 3;
 }
 
-.tumb-doing {
+.we-doing .items {
   position: relative;
   z-index: 1;
 }
@@ -418,10 +417,13 @@ img {
   left: 0;
   bottom: 0;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 100%;
-  padding: 27px 0;
+  height: 70px;
   margin: 0;
-  text-align: center;
 
   font-weight: 700;
   line-height: calc(16 / 14);
@@ -501,8 +503,7 @@ img {
 .team-link:hover,
 .team-link:focus {
   background-color: var(--accent-color);
-  color: var(--background-section-team);
-  cursor: pointer;
+  color: var(--button-color);
 }
 
 /* Regular clients */
